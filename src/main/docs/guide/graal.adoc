@@ -1,0 +1,23 @@
+include::{commondir}/common-graal-setup.adoc[]
+
+include::{commondir}/common-graal-nativeimage.adoc[]
+
+You can invoke the generated native image `micronautguide`.
+
+First request will be slow because you will hit the multiple seconds sleep.
+
+[source, bash]
+----
+curl "http://localhost:8080/OCTOBER"
+{"month":"OCTOBER","headlines":["Micronaut AOP: Awesome flexibility without the complexity"]}%
+----
+
+Second request uses the cache and the response is instantaneously.
+
+[source, bash]
+----
+curl "http://localhost:8080/OCTOBER"
+{"month":"OCTOBER","headlines":["Micronaut AOP: Awesome flexibility without the complexity"]}%
+----
+
+include::{commondir}/common-graal-docker.adoc[]

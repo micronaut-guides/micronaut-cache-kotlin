@@ -1,0 +1,23 @@
+We can verify that the cache works as expected with a JUNIT 5 test.
+
+To use Java Junit tests in your Micronaut's Kotlin app configure your build test dependencies such as:
+
+[source, groovy]
+.build.gradle
+----
+include::{sourceDir}/build.gradle[tag=javajunit]
+}
+----
+
+[source, java]
+.src/test/java/micronaut/example/micronaut/NewsServiceTest.java
+----
+include::{sourceDir}/src/test/java/example/micronaut/NewsServiceTest.java[]
+}
+----
+
+<1> Used to configure the test method execution order for the annotated test class.
+<2> Annotation used to define a Micronaut test
+<3> Inject `NewsService` bean.
+<4> Timeout annotation fails a test if its execution exceeds a given duration. It helps us verify that we are leaveraging the cache.
+<5> Used to configure the order in which the test method should executed relative to other tests in the class.

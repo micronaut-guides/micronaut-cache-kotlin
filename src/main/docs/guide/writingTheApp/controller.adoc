@@ -1,0 +1,23 @@
+Create a controller which engages the previous service:
+
+[source, kotlin]
+.src/main/kotlin/micronaut/example/micronaut/News.kt
+----
+include::{sourceDir}/src/main/kotlin/example/micronaut/News.kt[]
+----
+
+[source, kotlin]
+.src/main/kotlin/micronaut/example/micronaut/NewsController.kt
+----
+include::{sourceDir}/src/main/kotlin/example/micronaut/NewsController.kt[]
+----
+
+Add a test:
+
+[source, java]
+.src/test/java/micronaut/example/micronaut/NewsControllerTest.java
+----
+include::{sourceDir}/src/test/java/example/micronaut/NewsControllerTest.java[]
+----
+
+<1> We call the endpoint twice and verify with the `@Timeout` annotation that the cache is being used.

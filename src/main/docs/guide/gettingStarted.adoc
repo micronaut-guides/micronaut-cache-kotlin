@@ -1,0 +1,1 @@
+In this guide, you are going to use Micronaut's caching annotations to speed up your application.
