@@ -12,3 +12,5 @@ runningTheApp:
 graal:
   title: Generate a Micronaut app's Native Image with GraalVM
 next: Where To Go From Here?
+help:
+  title: Help with Micronaut
