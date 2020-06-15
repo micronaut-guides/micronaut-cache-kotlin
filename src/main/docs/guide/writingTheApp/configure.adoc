@@ -17,4 +17,4 @@ include::{sourceDir}/src/main/resources/application.yml[tag=config]
 
 <1> Configure a cache called `headlines`.
 
-TIP: Check the https://docs.micronaut.io/1.3.0.M1/guide/index.html#io.micronaut.cache.DefaultCacheConfiguration[properties (`maximum-size`, `expire-after-write` and `expire-after-access`)] to configure the size and expiration of your caches. It is important to keep the caches' size under control.
+TIP: Check the https://micronaut-projects.github.io/micronaut-cache/snapshot/guide/configurationreference.html#io.micronaut.cache.caffeine.DefaultCacheConfiguration[properties (`maximum-size`, `expire-after-write` and `expire-after-access`)] to configure the size and expiration of your caches. It is important to keep the caches' size under control.
