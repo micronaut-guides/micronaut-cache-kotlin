@@ -6,6 +6,7 @@ writingTheApp:
   title: Writing the Application
   configure: Configure the Application
   cacheApi: Micronaut Cache Api
+  test: Test the Cache
   controller: Controller
 runningTheApp:
   title: Running the app

@@ -1,4 +1,13 @@
-In this sample application, we cache news headlines. Configure your caches in `application.yml`:
+In this sample application, we cache news headlines. Add https://micronaut-projects.github.io/micronaut-cache/latest/guide/index.html[Micronaut Caffeine Cache] dependency which
+which adds support for cache using https://github.com/ben-manes/caffeine[Caffeine].
+
+[source, yml]
+.build.gradle
+----
+include::{sourceDir}/build.gradle[tag=cache-caffeine]
+----
+
+Configure your caches in `application.yml`:
 
 [source, yml]
 .src/main/resources/application.yml
@@ -7,7 +16,5 @@ include::{sourceDir}/src/main/resources/application.yml[tag=config]
 ----
 
 <1> Configure a cache called `headlines`.
-
-NOTE: By default Micronaut's cache uses, by default, https://github.com/ben-manes/caffeine[Caffeine].
 
 TIP: Check the https://docs.micronaut.io/1.3.0.M1/guide/index.html#io.micronaut.cache.DefaultCacheConfiguration[properties (`maximum-size`, `expire-after-write` and `expire-after-access`)] to configure the size and expiration of your caches. It is important to keep the caches' size under control.

@@ -1,0 +1,14 @@
+We can verify that the cache works as expected:
+
+[source, kotlin]
+.src/test/kotlin/micronaut/example/micronaut/NewsServiceTest.kt
+----
+include::{sourceDir}/src/test/kotlin/example/micronaut/NewsServiceTest.kt[]
+}
+----
+
+<1> Used to configure the test method execution order for the annotated test class.
+<2> Annotation used to define a Micronaut test
+<3> Inject `NewsService` bean.
+<4> Timeout annotation fails a test if its execution exceeds a given duration. It helps us verify that we are leaveraging the cache.
+<5> Used to configure the order in which the test method should executed relative to other tests in the class.
