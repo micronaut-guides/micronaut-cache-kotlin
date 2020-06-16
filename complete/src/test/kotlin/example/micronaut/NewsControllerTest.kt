@@ -20,14 +20,14 @@ class NewsControllerTest {
     @field:Client("/")
     lateinit var client: HttpClient
 
-    @Timeout(4) // <1>
+    @Timeout(5) // <1>
     @Test
     fun fetchingOctoberHeadlinesUsesCache() {
         val request: HttpRequest<Any> = HttpRequest.GET(UriBuilder.of("/").path(Month.OCTOBER.toString()).build())
         var news: News = client.toBlocking().retrieve(request, News::class.java)
         val expected = "Micronaut AOP: Awesome flexibility without the complexity"
-        Assertions.assertEquals(Arrays.asList(expected), news.headlines)
+        Assertions.assertEquals(listOf(expected), news.headlines)
         news = client.toBlocking().retrieve(request, News::class.java)
-        Assertions.assertEquals(Arrays.asList(expected), news.headlines)
+        Assertions.assertEquals(listOf(expected), news.headlines)
     }
 }
