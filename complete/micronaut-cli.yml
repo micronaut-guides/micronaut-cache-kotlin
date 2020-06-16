@@ -3,4 +3,4 @@ defaultPackage: example.micronaut
 testFramework: junit
 sourceLanguage: kotlin
 buildTool: gradle
-features: [app-name, cache-caffeine, docker, graalvm, gradle, http-client, junit, kotlin, kotlin-application, logback, netty-server, readme, shade, yaml]
+features: [app-name, cache-caffeine, docker, file-watch, graalvm, gradle, http-client, junit, kotlin, kotlin-application, logback, netty-server, readme, shade, yaml]
